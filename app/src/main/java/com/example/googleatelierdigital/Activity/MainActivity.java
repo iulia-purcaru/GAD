@@ -1,7 +1,8 @@
-package com.example.googleatelierdigital.activity;
+package com.example.googleatelierdigital.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.os.Bundle;
 
 import com.example.googleatelierdigital.R;
