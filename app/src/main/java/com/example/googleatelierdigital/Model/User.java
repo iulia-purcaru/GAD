@@ -4,9 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import lombok.Data;
 
-@Data
 @Entity(tableName = "Users")
 public class User {
 
@@ -24,6 +22,12 @@ public class User {
     private String password;
 
     public User() {
+    }
+
+    public User(String name, String password, String email){
+        this.username = name;
+        this.password = password;
+        this.email = email;
     }
 
     public int getId() {

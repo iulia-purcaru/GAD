@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FragmentRegister"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title"
+        android:fontFamily="@font/rye"
+        android:textSize="50sp" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/Email"-->
+    <!--        android:layout_below="@id/tv_title"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_marginLeft="72dp"-->
+    <!--        android:text="Email"-->
+    <!--        android:textSize="20sp"-->
+    <!--        />-->
+
+    <EditText
+        android:id="@+id/rFullName"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="50dp"
+        android:hint="Name"
+        />
+
+    <EditText
+        android:id="@+id/rEmail"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/rFullName"
+        android:layout_marginLeft="72dp"
+        android:hint="Email"
+        />
+    <EditText
+        android:id="@+id/rPassword"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/rEmail"
+        android:layout_marginLeft="72dp"
+        android:hint="Password"
+        />
+    <EditText
+        android:id="@+id/rPasswordC"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/rPassword"
+        android:layout_marginLeft="72dp"
+        android:hint="Email"
+        />
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rPasswordC"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="5dp"
+        android:topLeftRadius="5dp"
+        android:topRightRadius="5dp"
+        android:layout_marginTop="25dp"
+        />
+
+</RelativeLayout>

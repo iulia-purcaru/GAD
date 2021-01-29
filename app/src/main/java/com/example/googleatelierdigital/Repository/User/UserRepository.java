@@ -2,8 +2,9 @@ package com.example.googleatelierdigital.Repository.User;
 
 import android.content.Context;
 
+import com.example.googleatelierdigital.ActionListener;
 import com.example.googleatelierdigital.Database.Database;
-import com.example.googleatelierdigital.Database.DatabaseInstance;
+import com.example.googleatelierdigital.DatabaseInstance;
 import com.example.googleatelierdigital.Model.User;
 
 public class UserRepository {
@@ -12,7 +13,7 @@ public class UserRepository {
 
     public UserRepository(Context context) { appDatabase = DatabaseInstance.getAppDatabase(); }
 
-    public void insertTask(final User user, final OnUserRepositoryActionListener listener){
+    public void insertTask(final User user, final ActionListener listener){
         new InsertTask(listener).execute(user);
     }
 
@@ -20,7 +21,7 @@ public class UserRepository {
         return appDatabase.userDao().getUser(email, password);
     }
 
-    public  User getUserByEmailString(String email) {
+    public  User getUserByEmail(String email) {
         return  appDatabase.userDao().getUserByEmail(email);
     }
 

@@ -2,14 +2,15 @@ package com.example.googleatelierdigital.Repository.User;
 
 import android.os.AsyncTask;
 
-import com.example.googleatelierdigital.Database.DatabaseInstance;
+import com.example.googleatelierdigital.ActionListener;
+import com.example.googleatelierdigital.DatabaseInstance;
 import com.example.googleatelierdigital.Model.User;
 
 public class InsertTask extends AsyncTask<User, Void, Void> {
 
-    private OnUserRepositoryActionListener listener;
+    private ActionListener listener;
 
-    InsertTask(OnUserRepositoryActionListener listener) {
+    InsertTask(ActionListener listener) {
         this.listener = listener;
     }
 

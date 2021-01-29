@@ -12,11 +12,8 @@ import com.example.googleatelierdigital.Model.Trip;
 import com.example.googleatelierdigital.Model.TripPhoto;
 import com.example.googleatelierdigital.Model.User;
 
-@androidx.room.Database(entities = {User.class, Trip.class, TripPhoto.class}, version = 1)
+@androidx.room.Database(entities = {User.class, Trip.class, TripPhoto.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {
-
-    private static final String DB_NAME = "database.db";
-    private static Database instance;
 
     public abstract TripDao tripDao();
     public abstract UserDao userDao();
