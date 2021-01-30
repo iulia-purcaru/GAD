@@ -12,7 +12,7 @@ public class TripRepository {
 
     public TripRepository(Context context){appDatabase = DatabaseInstance.getAppDatabase(); }
 
-    public void insertTask(final Trip trip, final ActionListener listener){
+    public void insertTrip(final Trip trip, final ActionListener listener){
         new InsertTrip(listener).execute(trip);
     }
 }

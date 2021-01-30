@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentAdd">
+    tools:context=".FragmentAdd"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/tripName"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:hint="Trip Name"
+        android:layout_gravity="center"/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/tripLocation"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:hint="Trip Location"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/tripDate"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:hint="Trip Date"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageTrip"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Add trip"/>
+</LinearLayout>

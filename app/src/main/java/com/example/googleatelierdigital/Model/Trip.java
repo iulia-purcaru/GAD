@@ -31,6 +31,22 @@ public class Trip {
     public Trip() {
     }
 
+//    public Trip(String name, String location, int user_id) {
+//        this.name = name;
+//        this.location = location;
+//        this.user_id = user_id;
+//    }
+
+
+    public Trip(String name, String location, String date, String image_path, int user_id) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.date = date;
+        this.image_path = image_path;
+        this.user_id = user_id;
+    }
+
     public int getId() {
         return id;
     }

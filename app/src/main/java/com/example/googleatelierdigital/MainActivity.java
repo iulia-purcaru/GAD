@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         UserRepository userRepository = new UserRepository(getApplicationContext());
         String userName = userRepository.getUserNameById(userId);
 
-        TextView userNameTextView = navigationView.getHeaderView(0).findViewById(R.id.userName);
-        userNameTextView.setText("You are logged as " + userName);
+//        TextView userNameTextView = navigationView.getHeaderView(0).findViewById(R.id.userName);
+//        userNameTextView.setText("You are logged as " + userName);
 
         navigationView.setNavigationItemSelectedListener(this);
 
