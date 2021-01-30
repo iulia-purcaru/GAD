@@ -21,7 +21,7 @@ public class ActivityF extends AppCompatActivity {
             if(savedInstanceState != null){
                 return;
             }
-            fragmentManager.beginTransaction().add(R.id.fragment_container_first, new FragmentRegister()).commit();
+            fragmentManager.beginTransaction().add(R.id.fragment_container_first, new FragmentLogin()).commit();
         }
 
     }

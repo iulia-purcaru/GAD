@@ -3,36 +3,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".FragmentLogin"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
         android:text="@string/title"
         android:fontFamily="@font/rye"
+        android:textColor="#4A373D"
         android:textSize="50sp" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/Email"-->
-<!--        android:layout_below="@id/tv_title"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_marginLeft="72dp"-->
-<!--        android:text="Email"-->
-<!--        android:textSize="20sp"-->
-<!--        />-->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:text="A friendly way to share your trips."
+        android:textColor="#4A373D"
+        android:fontFamily="@font/rye"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/iEmail"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@id/tv_title"
+        android:layout_below="@id/subtitle"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="50dp"
         android:hint="Here is your email"

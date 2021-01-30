@@ -6,8 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -32,6 +36,43 @@ public class FragmentLogin extends Fragment {
         final EditText password = view.findViewById(R.id.iPassword);
 
         final Button login = view.findViewById(R.id.Login);
+        final GestureDetector gesture = new GestureDetector(getActivity(),
+                new GestureDetector.SimpleOnGestureListener() {
+
+                    @Override
+                    public boolean onDown(MotionEvent e) {
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+                        final int SWIPE_MIN_DISTANCE = 120;
+                        final int SWIPE_MAX_OFF_PATH = 250;
+                        final int SWIPE_THRESHOLD_VELOCITY = 200;
+                        try {
+                            if (Math.abs(motionEvent.getY() - motionEvent1.getY()) > SWIPE_MAX_OFF_PATH)
+                                return false;
+                            if (motionEvent1.getX() - motionEvent.getX() < -SWIPE_MIN_DISTANCE
+                                    && Math.abs(v) > SWIPE_THRESHOLD_VELOCITY) {
+                                FragmentRegister registerFragment = new FragmentRegister();
+                                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                                fragmentTransaction.replace(R.id.fragment_container_first, registerFragment);
+                                fragmentTransaction.commit();
+                            }
+                        } catch (Exception e) {
+                            // nothing
+                        }
+                        return super.onFling(motionEvent, motionEvent1, v, v1);
+                    }
+                });
+
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gesture.onTouchEvent(event);
+            }
+        });
+
         login.setOnClickListener(new View.OnClickListener() {
                                  @Override
                                  public void onClick(View view) {
