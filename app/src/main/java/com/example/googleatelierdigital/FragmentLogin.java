@@ -1,5 +1,8 @@
 package com.example.googleatelierdigital;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -50,7 +53,17 @@ public class FragmentLogin extends Fragment {
                                              password.requestFocus();
                                          }
                                          else{
-                                             Toast.makeText(getContext(), "User is not correct", Toast.LENGTH_LONG).show();
+                                             if(user != null){
+                                                 Toast.makeText(getContext(), "User found!", Toast.LENGTH_SHORT).show();
+                                                 SharedPreferences sharedPref = getActivity().getSharedPreferences("com.example.googleatelierdigital", Context.MODE_PRIVATE);
+                                                 SharedPreferences.Editor editor = sharedPref.edit();
+                                                 editor.putInt("com.example.googleatelierdigital.userId", user.getId());
+                                                 editor.apply();
+                                                 Intent intent = new Intent(getActivity(), MainActivity.class);
+                                                 startActivity(intent);
+                                             } else {
+                                                 Toast.makeText(getContext(), "User not found!", Toast.LENGTH_SHORT).show();
+                                             }
                                          }
 
                                      }
