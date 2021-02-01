@@ -80,7 +80,7 @@ public class FragmentAdd extends Fragment {
             @Override
             public void onClick(View view) {
                 SharedPreferences sharedPreferences = getActivity().getSharedPreferences("com.example.googleatelierdigital", Context.MODE_PRIVATE);
-                int userId = sharedPreferences.getInt("com.example.googleatelierdigital", 0);
+                int userId = sharedPreferences.getInt("com.example.googleatelierdigital.userId", 0);
 
                 if(nameTrip.getText().toString().isEmpty()){
                     nameTrip.setError("Insert Trip Name!");

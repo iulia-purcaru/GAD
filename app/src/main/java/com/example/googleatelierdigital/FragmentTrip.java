@@ -8,12 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentAll#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class FragmentAll extends Fragment {
+public class FragmentTrip extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +19,7 @@ public class FragmentAll extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentAll() {
+    public FragmentTrip() {
         // Required empty public constructor
     }
 
@@ -34,11 +29,11 @@ public class FragmentAll extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentAll.
+     * @return A new instance of fragment fragment_trip.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentAll newInstance(String param1, String param2) {
-        FragmentAll fragment = new FragmentAll();
+    public static FragmentTrip newInstance(String param1, String param2) {
+        FragmentTrip fragment = new FragmentTrip();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +54,6 @@ public class FragmentAll extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all, container, false);
+        return inflater.inflate(R.layout.fragment_trip, container, false);
     }
 }

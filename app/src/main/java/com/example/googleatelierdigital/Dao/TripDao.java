@@ -1,6 +1,7 @@
 package com.example.googleatelierdigital.Dao;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -19,4 +20,13 @@ public interface TripDao {
 
     @Insert
     void insertTrip(Trip trip);
+
+    @Query("SELECT * FROM Trips WHERE trip_id=:id")
+    Trip getTrip(int id);
+
+    @Query("SELECT * FROM Trips WHERE trip_name=:name")
+    Trip getTripByName(String name);
+
+    @Delete
+    void delete(Trip trip);
 }

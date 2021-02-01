@@ -7,15 +7,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-import com.example.googleatelierdigital.R;
 import com.example.googleatelierdigital.Repository.User.UserRepository;
 import com.google.android.material.navigation.NavigationView;
 
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new FragmentAll()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new FragmentAllTrips()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
@@ -63,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new FragmentAll()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new FragmentAllTrips()).commit();
                 break;
             case R.id.nav_add_trip:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new FragmentAdd()).commit();

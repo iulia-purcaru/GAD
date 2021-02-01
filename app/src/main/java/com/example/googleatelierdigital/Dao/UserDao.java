@@ -26,4 +26,7 @@ public interface UserDao {
 
     @Query("SELECT * FROM Users WHERE user_email =:email")
     User getUserByEmail(String email);
+
+
+
 }
