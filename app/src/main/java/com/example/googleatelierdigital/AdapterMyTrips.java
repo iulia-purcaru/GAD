@@ -35,16 +35,16 @@ public class AdapterMyTrips extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView tripNameView;
-        public TextView tripIdView;
-        public ImageView tripImageView;
+        public TextView tripNameView_;
+        public TextView tripIdView_;
+        public ImageView tripImageView_;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tripNameView = itemView.findViewById(R.id.myTripName);
-            tripIdView = itemView.findViewById(R.id.myTripId);
-            tripImageView = itemView.findViewById(R.id.myTripImage);
+            tripNameView_ = itemView.findViewById(R.id.myTripName);
+            tripIdView_ = itemView.findViewById(R.id.myTripId);
+            tripImageView_ = itemView.findViewById(R.id.myTripImage);
         }
     }
 
@@ -59,13 +59,12 @@ public class AdapterMyTrips extends RecyclerView.Adapter<RecyclerView.ViewHolder
         RecyclerView.ViewHolder viewHolder = new AdapterMyTrips.ViewHolder(view);
 
         Button delete = view.findViewById(R.id.myTripDelete);
-        final TextView recipeIdTextView = ((ViewHolder)viewHolder).tripIdView;
+        final TextView recipeIdTextView = ((ViewHolder)viewHolder).tripIdView_;
 
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TripRepository tripRepository = new TripRepository(context);
-                //caut recipe-ul
                 Trip trip = tripRepository.getTrip(Integer.parseInt(recipeIdTextView.getText().toString()));
 
                 tripRepository.deleteTrip(trip);
@@ -76,43 +75,24 @@ public class AdapterMyTrips extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     FragmentManager manager = ((MainActivity)context).getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.fragment_container_main, new FragmentMyTrips()).commit();
                 } else {
-                    Toast.makeText(context, "Error on delete recipe!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Error on delete recipe!", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-//        view.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                //pastrez id-ul reteti pt a aduce apoi datele
-//                SharedPreferences sharedPref = context.getSharedPreferences("com.example.kitchenmasterapp", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sharedPref.edit();
-//                editor.putInt("com.example.kitchenmasterapp.recipeId", Integer.parseInt(recipeIdTextView.getText().toString()));
-//                editor.apply();
-//
-//                FragmentManager manager = ((MainActivity)context).getSupportFragmentManager();
-//                manager.beginTransaction().replace(R.id.fragment_container_main, new ShowRecipeFragment()).commit();
-//            }
-//        });
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ImageView image = ((ViewHolder)holder).tripImageView;
-        TextView nameTextView = ((ViewHolder)holder).tripNameView;
-        TextView tripIdTextView = ((ViewHolder)holder).tripIdView;
-//        Uri uri = Uri.parse((items.get(position).getImage_path()));
-//        Bitmap bitmap = MediaStore.Images.Thumbnails.getThumbnail(
-//                this.context.getContentResolver(), Integer.parseInt(uri.getLastPathSegment()),
-//                MediaStore.Images.Thumbnails.MINI_KIND,
-//                (BitmapFactory.Options) null );
+        ImageView image = ((ViewHolder)holder).tripImageView_;
+        TextView nameTextView = ((ViewHolder)holder).tripNameView_;
+        TextView tripIdTextView = ((ViewHolder)holder).tripIdView_;
         nameTextView.setText(vTrips.get(position).getName());
         tripIdTextView.setText(((Integer)vTrips.get(position).getId()).toString());
 
     }
-
 
     @Override
     public int getItemCount() {

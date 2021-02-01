@@ -6,6 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 
 import com.example.googleatelierdigital.Model.Trip;
+import com.example.googleatelierdigital.Model.User;
 
 import java.util.List;
 
@@ -29,4 +30,7 @@ public interface TripDao {
 
     @Delete
     void delete(Trip trip);
+
+    @Query("SELECT user_name FROM Users INNER JOIN TRIPS WHERE trip_id=:id")
+    String getUserIdByTripId(int id);
 }

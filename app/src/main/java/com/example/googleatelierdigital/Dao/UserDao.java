@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import com.example.googleatelierdigital.Model.Trip;
 import com.example.googleatelierdigital.Model.User;
 
 @Dao
@@ -26,7 +27,5 @@ public interface UserDao {
 
     @Query("SELECT * FROM Users WHERE user_email =:email")
     User getUserByEmail(String email);
-
-
 
 }

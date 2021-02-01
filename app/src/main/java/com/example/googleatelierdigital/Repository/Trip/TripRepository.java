@@ -39,4 +39,8 @@ public class TripRepository {
     public List<Trip> getTripsByUserId(int userId) {
         return appDatabase.tripDao().getAllTripsByUserId(userId);
     }
+
+    public String getUserIdByTripId(int tripId) {
+        return appDatabase.tripDao().getUserIdByTripId(tripId);
+    }
 }

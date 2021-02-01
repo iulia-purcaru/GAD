@@ -56,6 +56,7 @@
         android:layout_below="@id/rEmail"
         android:layout_marginLeft="72dp"
         android:hint="Password"
+        android:inputType="textPassword"
         />
     <EditText
         android:id="@+id/rPasswordC"
@@ -63,7 +64,8 @@
         android:layout_height="50dp"
         android:layout_below="@id/rPassword"
         android:layout_marginLeft="72dp"
-        android:hint="Email"
+        android:hint="RePassword"
+        android:inputType="textPassword"
         />
 
     <Button
@@ -79,5 +81,17 @@
         android:topRightRadius="5dp"
         android:layout_marginTop="25dp"
         />
+
+    <TextView
+        android:id="@+id/iLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Register"
+        android:layout_marginTop="10dp"
+        android:text="Swipe left to LogIn!"
+        android:textColor="#4A373D"
+        android:textStyle="italic"
+        android:textSize="15sp" />
 
 </RelativeLayout>

@@ -56,22 +56,5 @@ public class FragmentAllTrips extends Fragment {
         recyclerView.setAdapter(adapterAllTrips);
         layoutManager.setSmoothScrollbarEnabled(true);
     }
-//        EditText editText = (EditText) view.findViewById(R.id.search_recipe);
-//        editText.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                filter(s.toString());
-//            }
-//        });
-//    }
+
 }

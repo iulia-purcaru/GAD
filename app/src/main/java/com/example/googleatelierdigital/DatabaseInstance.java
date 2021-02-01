@@ -24,7 +24,7 @@ public class DatabaseInstance extends Application {
         mInstance  = this;
 
         mAppDatabase = Room.databaseBuilder(getApplicationContext(),
-                Database.class, Constants.DB_NAME).allowMainThreadQueries().build();
+                Database.class, "DB_app").allowMainThreadQueries().build();
     }
 
     public static Database getAppDatabase(){

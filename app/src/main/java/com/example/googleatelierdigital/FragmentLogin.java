@@ -88,7 +88,7 @@ public class FragmentLogin extends Fragment {
                                          password.setError("You must provide a password!");
                                          password.requestFocus();
                                      }
-                                     else if(user != null && !pass.equals(password.getText().toString())){
+                                     else if(user != null && !pass.equals(password.getText().toString().toLowerCase())){
                                          password.setError("The password is incorrect!");
                                          password.requestFocus();
                                      }

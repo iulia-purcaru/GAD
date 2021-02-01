@@ -20,6 +20,7 @@
             android:text="Your Trips"
             android:textSize="32sp"
             android:layout_gravity="center"
+            android:fontFamily="@font/rye"
             />
 
         <androidx.recyclerview.widget.RecyclerView

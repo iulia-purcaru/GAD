@@ -18,6 +18,15 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/background"/>
+<!--        <View-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1" />-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/uTripName"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            />&ndash;&gt;-->
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -38,5 +47,8 @@
             android:layout_height="wrap_content"
             android:visibility="invisible" />
 
+
     </LinearLayout>
+
+
 </androidx.cardview.widget.CardView>

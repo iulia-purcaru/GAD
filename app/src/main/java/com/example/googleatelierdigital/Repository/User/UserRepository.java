@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.googleatelierdigital.ActionListener;
 import com.example.googleatelierdigital.Database.Database;
 import com.example.googleatelierdigital.DatabaseInstance;
+import com.example.googleatelierdigital.Model.Trip;
 import com.example.googleatelierdigital.Model.User;
 
 public class UserRepository {
@@ -36,4 +37,5 @@ public class UserRepository {
     public String getUserNameById(int userId) {
         return appDatabase.userDao().getUserNameById(userId);
     }
+
 }

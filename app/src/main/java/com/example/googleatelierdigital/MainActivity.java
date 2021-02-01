@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.googleatelierdigital.Repository.User.UserRepository;
 import com.google.android.material.navigation.NavigationView;
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         UserRepository userRepository = new UserRepository(getApplicationContext());
         String userName = userRepository.getUserNameById(userId);
 
-//        TextView userNameTextView = navigationView.getHeaderView(0).findViewById(R.id.userName);
-//        userNameTextView.setText("You are logged as " + userName);
+        TextView userNameTextView = navigationView.getHeaderView(0).findViewById(R.id.userName);
+        userNameTextView.setText("You are logged as " + userName);
 
         navigationView.setNavigationItemSelectedListener(this);
 

@@ -48,6 +48,7 @@
         android:layout_below="@id/iEmail"
         android:layout_marginLeft="72dp"
         android:hint="Here is your password"
+        android:inputType="textPassword"
         />
 
     <Button
@@ -63,5 +64,17 @@
         android:topRightRadius="5dp"
         android:layout_marginTop="25dp"
         />
+
+    <TextView
+        android:id="@+id/iReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Login"
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account? Swipe left to Register!"
+        android:textColor="#4A373D"
+        android:textStyle="italic"
+        android:textSize="15sp" />
 
 </RelativeLayout>
