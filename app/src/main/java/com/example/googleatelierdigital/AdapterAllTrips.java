@@ -33,14 +33,14 @@ public class AdapterAllTrips extends RecyclerView.Adapter<RecyclerView.ViewHolde
         public TextView tripNameView;
         public TextView tripIdView;
         public ImageView tripImageView;
-//        public TextView userTripNameView;
+        public TextView tripDateView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             tripNameView = itemView.findViewById(R.id.tripName);
             tripIdView = itemView.findViewById(R.id.tripId);
-//            userTripNameView = itemView.findViewById(R.id.uTripName);
+            tripDateView = itemView.findViewById(R.id.tripDate);
             tripImageView = itemView.findViewById(R.id.tripImage);
         }
     }
@@ -82,7 +82,7 @@ public class AdapterAllTrips extends RecyclerView.Adapter<RecyclerView.ViewHolde
         ImageView image = ((ViewHolder)holder).tripImageView;
         TextView nameTextView = ((ViewHolder)holder).tripNameView;
         TextView tripIdTextView = ((ViewHolder)holder).tripIdView;
-//        TextView userTripNameView = ((ViewHolder)holder).userTripNameView;
+        TextView dateTripView = ((ViewHolder)holder).tripDateView;
 
 
 //        TripRepository tripRepository = new TripRepository(context);
@@ -90,7 +90,7 @@ public class AdapterAllTrips extends RecyclerView.Adapter<RecyclerView.ViewHolde
 //        userTripNameView.setText(userName);
 
         nameTextView.setText(vTrips.get(position).getName());
-
+        dateTripView.setText(vTrips.get(position).getDate());
         tripIdTextView.setText(((Integer)vTrips.get(position).getId()).toString());
     }
 
